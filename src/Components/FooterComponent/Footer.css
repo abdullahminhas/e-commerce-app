@@ -1,0 +1,30 @@
+:root {
+    --background-color: #F8F1EF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.footer {
+    width: 100%;
+    height: 50vh;
+    background-color: var(--background-color);
+    /* margin-top: auto; */
+}
+
+.footer .info-section {
+    margin-top: 25px;
+}
+
+.footer .info-section p {
+    line-height: 0.6;
+    font-size: 12px;
+}
+
+.footer .info-section h6 {
+    font-weight: 700;
+}
