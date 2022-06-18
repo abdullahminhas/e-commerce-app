@@ -28,6 +28,11 @@
     rgba(229, 229, 229, 0) 100%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
-.active {
-  color: red;
+.selected {
+  color: rgba(0, 0, 0, 0.7) !important;
+  font-weight: 600;
+}
+.brandTitle a {
+  text-decoration: none;
+  color: black;
 }

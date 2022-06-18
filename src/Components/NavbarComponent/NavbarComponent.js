@@ -2,20 +2,11 @@ import { NavLink } from "react-router-dom";
 import classes from "./NavbarComponent.module.css";
 
 const Navbar = (props) => {
-  const checkActive = (match, location) => {
-    //some additional logic to verify you are in the home URI
-    if (!location) return false;
-    const { pathname } = location;
-    console.log(pathname);
-    return pathname === "/";
-  };
   return (
     <div className="d-flex flex-column">
       <div>
-        <h2 className="text-center">
-          <a className="navbar-brand" href="#">
-            Royal Traders
-          </a>
+        <h2 className={`text-center ${classes.brandTitle}`}>
+          <a href="#">Royal Traders</a>
         </h2>
       </div>
       <div className={classes.line}></div>
@@ -36,18 +27,21 @@ const Navbar = (props) => {
             <ul className="navbar-nav mx-auto">
               <li className="nav-item">
                 <NavLink
-                  className="nav-link"
-                  activeStyle={{ color: "red" }}
+                  className={({ isActive }) =>
+                    isActive ? `nav-link ${classes.selected}` : "nav-link"
+                  }
+                  end
                   to="/"
-                  isActive={checkActive}
                 >
                   Home
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink
-                  className="nav-link"
-                  activeStyle={{ color: "red" }}
+                  className={({ isActive }) =>
+                    isActive ? `nav-link ${classes.selected}` : "nav-link"
+                  }
+                  end
                   to="/about"
                 >
                   About
@@ -59,12 +53,7 @@ const Navbar = (props) => {
                 </a>
               </li>
               <li className="nav-item">
-                <a
-                  className="nav-link"
-                  href="#"
-                  tabindex="-1"
-                  aria-disabled="true"
-                >
+                <a className="nav-link" href="#">
                   Disabled
                 </a>
               </li>

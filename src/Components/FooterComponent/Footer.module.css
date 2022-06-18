@@ -1,0 +1,43 @@
+:root {
+  /* --background-color: #F8F1EF; */
+  --background-color: #e3e3e3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer {
+  width: 100%;
+  height: 50vh;
+  background-color: var(--background-color);
+  /* margin-top: auto; */
+}
+
+.footer .infoSection {
+  margin-top: 25px;
+}
+
+.footer .infoSection p {
+  line-height: 0.6;
+  font-size: 12px;
+}
+
+.footer .infoSection h6 {
+  font-weight: 700;
+}
+
+.footerIco {
+  background-color: white;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+}
+
+.footerHeadText {
+  color: white;
+  margin-bottom: 0;
+}
