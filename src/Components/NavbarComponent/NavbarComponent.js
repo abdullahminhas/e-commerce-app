@@ -2,6 +2,13 @@ import { NavLink } from "react-router-dom";
 import classes from "./NavbarComponent.module.css";
 
 const Navbar = (props) => {
+  const checkActive = (match, location) => {
+    //some additional logic to verify you are in the home URI
+    if (!location) return false;
+    const { pathname } = location;
+    console.log(pathname);
+    return pathname === "/";
+  };
   return (
     <div className="d-flex flex-column">
       <div>
@@ -12,7 +19,7 @@ const Navbar = (props) => {
         </h2>
       </div>
       <div className={classes.line}></div>
-      <nav className="navbar navbar-expand-lg navbar-light">
+      <nav className="navbar py-0 navbar-expand-lg navbar-light">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -28,12 +35,21 @@ const Navbar = (props) => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav mx-auto">
               <li className="nav-item">
-                <NavLink className="nav-link active" aria-current="page" to="/">
+                <NavLink
+                  className="nav-link"
+                  activeStyle={{ color: "red" }}
+                  to="/"
+                  isActive={checkActive}
+                >
                   Home
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/about">
+                <NavLink
+                  className="nav-link"
+                  activeStyle={{ color: "red" }}
+                  to="/about"
+                >
                   About
                 </NavLink>
               </li>
@@ -44,7 +60,7 @@ const Navbar = (props) => {
               </li>
               <li className="nav-item">
                 <a
-                  className="nav-link disabled"
+                  className="nav-link"
                   href="#"
                   tabindex="-1"
                   aria-disabled="true"

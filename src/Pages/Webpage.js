@@ -14,7 +14,7 @@ function Webpage() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} exact></Route>
-        <Route path="/about" element={<About />} exact></Route>
+        <Route path="/about" element={<About />}></Route>
       </Routes>
     </Router>
   );

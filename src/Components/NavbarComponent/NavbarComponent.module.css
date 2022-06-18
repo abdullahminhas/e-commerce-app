@@ -28,3 +28,6 @@
     rgba(229, 229, 229, 0) 100%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
+.active {
+  color: red;
+}
