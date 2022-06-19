@@ -4,6 +4,8 @@ import Footer from "../../Components/FooterComponent/Footer";
 import Navbar from "../../Components/NavbarComponent/NavbarComponent";
 import img from "../../assets/clothes.jpeg";
 import img2 from "../../assets/clothes2.jpeg";
+import Card from "../../Components/CardComponent/Card";
+import CardData from "../../Components/CardComponent/CardData";
 
 const Home = () => {
   return (
@@ -84,6 +86,20 @@ const Home = () => {
           ></span>
           <span className="visually-hidden">Next</span>
         </button>
+      </div>
+      <div>
+        <h4 className="text-uppercase text-center">Trending - Categories</h4>
+        <div className="home-cards">
+          <Card details={CardData} />
+        </div>
+        <h4 className="text-uppercase text-center">Shop By Categories</h4>
+        <div className="home-cards">
+          <Card details={CardData} />
+        </div>
+        <h4 className="text-uppercase text-center">Discover</h4>
+        <div className="home-cards">
+          <Card details={CardData} />
+        </div>
       </div>
       <Footer />
     </div>

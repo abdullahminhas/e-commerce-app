@@ -3,3 +3,12 @@
   height: 300px !important;
   object-fit: cover !important;
 }
+
+.cards-section {
+  display: flex;
+  justify-content: center;
+}
+
+.home-cards {
+  margin: auto;
+}
