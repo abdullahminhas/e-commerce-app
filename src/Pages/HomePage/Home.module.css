@@ -4,11 +4,11 @@
   object-fit: cover !important;
 }
 
-.cards-section {
+.cardsSection {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
-.home-cards {
+.homeCards {
   margin: auto;
 }

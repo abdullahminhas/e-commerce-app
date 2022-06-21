@@ -88,15 +88,15 @@ const Home = () => {
       </div>
       <div>
         <h4 className="text-uppercase text-center">Trending - Categories</h4>
-        <div className="home-cards">
+        <div className={`${classes.homeCards} ${classes.cardsSection}`}>
           <Card details={CardData} />
         </div>
         <h4 className="text-uppercase text-center">Shop By Categories</h4>
-        <div className="home-cards">
+        <div className={`${classes.homeCards} ${classes.cardsSection}`}>
           <Card details={CardData} />
         </div>
         <h4 className="text-uppercase text-center">Discover</h4>
-        <div className="home-cards">
+        <div className={`${classes.homeCards} ${classes.cardsSection}`}>
           <Card details={CardData} />
         </div>
       </div>
