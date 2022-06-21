@@ -1,16 +1,48 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import classes from "./NavbarComponent.module.css";
+import dark from "./DarkNav.module.css";
 
 const Navbar = (props) => {
+  const [darkMode, setDarkMode] = useState(false);
+  console.log(darkMode);
+
   return (
-    <div className="d-flex flex-column">
-      <div>
-        <h2 className={`text-center ${classes.brandTitle}`}>
+    <div
+      className={
+        darkMode == true
+          ? `d-flex flex-column ${dark.bgDark}`
+          : "d-flex flex-column"
+      }
+    >
+      <div className="text-center ">
+        <h2
+          className={
+            darkMode == true ? `${dark.brandTitle}` : `${classes.brandTitle}`
+          }
+        >
           <a href="#">Royal Traders</a>
         </h2>
+        <label className={darkMode == true ? "text-light" : "text-dark"}>
+          <input
+            type={"checkbox"}
+            className="me-2"
+            value="check"
+            onChange={(e) => setDarkMode(e.target.checked)}
+          />
+          Dark Mode
+        </label>
       </div>
-      <span className={classes.line}></span>
-      <nav className="navbar py-0 navbar-expand-lg navbar-light">
+      <span
+        className={darkMode == true ? `${dark.line}` : `${classes.line}`}
+      ></span>
+      <nav
+        className={
+          darkMode == true
+            ? "navbar py-0 navbar-expand-lg navbar-dark"
+            : "navbar py-0 navbar-expand-lg navbar-light"
+        }
+      >
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -31,7 +63,11 @@ const Navbar = (props) => {
               <li className="nav-item">
                 <NavLink
                   className={({ isActive }) =>
-                    isActive ? `nav-link ${classes.selected}` : "nav-link"
+                    isActive
+                      ? darkMode == true
+                        ? `nav-link ${dark.selected}`
+                        : `nav-link ${classes.selected}`
+                      : "nav-link"
                   }
                   end
                   to="/"
@@ -42,7 +78,11 @@ const Navbar = (props) => {
               <li className="nav-item">
                 <NavLink
                   className={({ isActive }) =>
-                    isActive ? `nav-link ${classes.selected}` : "nav-link"
+                    isActive
+                      ? darkMode == true
+                        ? `nav-link ${dark.selected}`
+                        : `nav-link ${classes.selected}`
+                      : "nav-link"
                   }
                   end
                   to="/about"
@@ -65,7 +105,11 @@ const Navbar = (props) => {
               >
                 <div className="dropdown">
                   <button
-                    className={`btn dropdown-toggle ${classes.menuBox}`}
+                    className={
+                      darkMode == true
+                        ? `btn dropdown-toggle ${dark.menuBox}`
+                        : `btn dropdown-toggle ${classes.menuBox}`
+                    }
                     type="button"
                     id="dropdownMenuAcc"
                     data-bs-toggle="dropdown"
@@ -87,7 +131,11 @@ const Navbar = (props) => {
                 </div>
                 <div className="dropdown">
                   <button
-                    className={`btn dropdown-toggle ${classes.menuBox}`}
+                    className={
+                      darkMode == true
+                        ? `btn dropdown-toggle ${dark.menuBox}`
+                        : `btn dropdown-toggle ${classes.menuBox}`
+                    }
                     type="button"
                     id="dropdownMenuFav"
                     data-bs-toggle="dropdown"
@@ -109,14 +157,18 @@ const Navbar = (props) => {
                 </div>
                 <div className="dropdown">
                   <button
-                    className={`btn dropdown-toggle ${classes.menuBox}`}
+                    className={
+                      darkMode == true
+                        ? `btn dropdown-toggle ${dark.menuBox}`
+                        : `btn dropdown-toggle ${classes.menuBox}`
+                    }
                     type="button"
                     id="dropdownMenuCart"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                     data-bs-auto-close="outside"
                   >
-                    F
+                    C
                   </button>
                   <div
                     className="dropdown-menu dropdown-menu-lg-end p-4 text-muted"

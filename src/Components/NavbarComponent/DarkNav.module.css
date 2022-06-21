@@ -1,0 +1,48 @@
+.bgDark {
+  background-color: black;
+}
+.line {
+  margin: 0 auto;
+  display: block;
+  width: 80%;
+  height: 1px;
+  background: -moz-linear-gradient(
+    left,
+    rgba(30, 87, 153, 0) 0%,
+    #fffffffa 50%,
+    #fffffffa 51%,
+    rgba(225, 228, 226, 0) 99%,
+    rgba(229, 229, 229, 0) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    rgba(30, 87, 153, 0) 0%,
+    #fffffffa 50%,
+    #fffffffa 51%,
+    rgba(225, 228, 226, 0) 99%,
+    rgba(229, 229, 229, 0) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    rgba(30, 87, 153, 0) 0%,
+    #fffffffa 50%,
+    #fffffffa 51%,
+    rgba(225, 228, 226, 0) 99%,
+    rgba(229, 229, 229, 0) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.brandTitle a {
+  text-decoration: none;
+  color: white;
+}
+.selected {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-weight: 600;
+}
+.menuBox {
+  box-shadow: 1px 4px 8px rgb(246 246 246 / 45%);
+  background-color: white;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 0px 10px;
+}
