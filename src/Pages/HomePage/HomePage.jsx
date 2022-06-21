@@ -11,10 +11,9 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      Home
       <div
         id="carouselExampleIndicators"
-        className="carousel slide"
+        className="carousel slide mt-5"
         data-bs-ride="carousel"
       >
         <div className="carousel-indicators">
@@ -43,21 +42,21 @@ const Home = () => {
           <div className="carousel-item active">
             <img
               src={img}
-              class={`d-block w-100 ${classes.carouselImg}`}
+              className={`d-block w-100 ${classes.carouselImg}`}
               alt="..."
             />
           </div>
           <div className="carousel-item">
             <img
               src={img2}
-              class={`d-block w-100 ${classes.carouselImg}`}
+              className={`d-block w-100 ${classes.carouselImg}`}
               alt="..."
             />
           </div>
           <div className="carousel-item">
             <img
               src={img}
-              class={`d-block w-100 ${classes.carouselImg}`}
+              className={`d-block w-100 ${classes.carouselImg}`}
               alt="..."
             />
           </div>

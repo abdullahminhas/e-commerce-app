@@ -9,7 +9,7 @@ const Navbar = (props) => {
           <a href="#">Royal Traders</a>
         </h2>
       </div>
-      <div className={classes.line}></div>
+      <span className={classes.line}></span>
       <nav className="navbar py-0 navbar-expand-lg navbar-light">
         <div className="container-fluid">
           <button
@@ -23,7 +23,10 @@ const Navbar = (props) => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <div
+            className="collapse navbar-collapse  position-relative"
+            id="navbarNav"
+          >
             <ul className="navbar-nav mx-auto">
               <li className="nav-item">
                 <NavLink
@@ -57,11 +60,81 @@ const Navbar = (props) => {
                   Disabled
                 </a>
               </li>
+              <div
+                className={`d-flex flex-row align-items-center ${classes.loc}`}
+              >
+                <div className="dropdown">
+                  <button
+                    className={`btn dropdown-toggle ${classes.menuBox}`}
+                    type="button"
+                    id="dropdownMenuAcc"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    data-bs-auto-close="outside"
+                  >
+                    A
+                  </button>
+                  <div
+                    className="dropdown-menu dropdown-menu-lg-end p-4 text-muted"
+                    style={{ maxWidth: "400px" }}
+                  >
+                    <p>
+                      Some example text that's free-flowing within the dropdown
+                      menu.
+                    </p>
+                    <p className="mb-0">And this is more example text.</p>
+                  </div>
+                </div>
+                <div className="dropdown">
+                  <button
+                    className={`btn dropdown-toggle ${classes.menuBox}`}
+                    type="button"
+                    id="dropdownMenuFav"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    data-bs-auto-close="outside"
+                  >
+                    F
+                  </button>
+                  <div
+                    className="dropdown-menu dropdown-menu-lg-end p-4 text-muted"
+                    style={{ maxWidth: "400px" }}
+                  >
+                    <p>
+                      Some example text that's free-flowing within the dropdown
+                      menu.
+                    </p>
+                    <p className="mb-0">And this is more example text.</p>
+                  </div>
+                </div>
+                <div className="dropdown">
+                  <button
+                    className={`btn dropdown-toggle ${classes.menuBox}`}
+                    type="button"
+                    id="dropdownMenuCart"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    data-bs-auto-close="outside"
+                  >
+                    F
+                  </button>
+                  <div
+                    className="dropdown-menu dropdown-menu-lg-end p-4 text-muted"
+                    style={{ maxWidth: "400px" }}
+                  >
+                    <p>
+                      Some example text that's free-flowing within the dropdown
+                      menu.
+                    </p>
+                    <p className="mb-0">And this is more example text.</p>
+                  </div>
+                </div>
+              </div>
             </ul>
           </div>
         </div>
       </nav>
-      <div className={classes.line}></div>
+      <span className={classes.line}></span>
     </div>
   );
 };
