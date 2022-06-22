@@ -90,17 +90,23 @@ const Home = () => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
-      <div>
-        <h4 className="text-uppercase text-center">Trending - Categories</h4>
-        <div className={`${classes.homeCards} ${classes.cardsSection}`}>
+      <div className="headings">
+        <h4 className={darkMode === true
+          ? "text-white text-center text-uppercase"
+          : "text-dark text-center text-uppercase"}>Trending - Categories</h4>
+        <div className={darkMode === true ? "text-white text-center" : "text-dark text-center"}{...`${classes.homeCards} ${classes.cardsSection}`}>
           <Card details={CardData} />
         </div>
-        <h4 className="text-uppercase text-center">Shop By Categories</h4>
-        <div className={`${classes.homeCards} ${classes.cardsSection}`}>
+        <h4 className={darkMode === true
+          ? "text-white text-center text-uppercase"
+          : "text-dark text-center text-uppercase"}>Shop By Categories</h4>
+        <div className={darkMode === true ? "text-white text-center" : "text-dark text-center"}{...`${classes.homeCards} ${classes.cardsSection}`}>
           <Card details={CardData} />
         </div>
-        <h4 className="text-uppercase text-center">Discover</h4>
-        <div className={`${classes.homeCards} ${classes.cardsSection}`}>
+        <h4 className={darkMode === true
+          ? "text-white text-center text-uppercase"
+          : "text-dark text-center text-uppercase"}>Discover</h4>
+        <div className={darkMode === true ? "text-white text-center" : "text-dark text-center"}{...`${classes.homeCards} ${classes.cardsSection}`}>
           <Card details={CardData} />
         </div>
       </div>

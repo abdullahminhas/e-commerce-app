@@ -32,7 +32,7 @@ const Navbar = (props) => {
         <label className={darkMode == true ? "text-light" : "text-dark"}>
           <input
             type={"checkbox"}
-            className="me-2"
+            className="me-2 toggle-button"
             value="check"
             onChange={handleChange}
           />

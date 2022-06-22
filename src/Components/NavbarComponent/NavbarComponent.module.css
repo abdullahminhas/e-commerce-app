@@ -3,46 +3,65 @@
   display: block;
   width: 80%;
   height: 1px;
-  background: -moz-linear-gradient(
-    left,
-    rgba(30, 87, 153, 0) 0%,
-    #545454fa 50%,
-    #545454fa 51%,
-    rgba(225, 228, 226, 0) 99%,
-    rgba(229, 229, 229, 0) 100%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    left,
-    rgba(30, 87, 153, 0) 0%,
-    #545454fa 50%,
-    #545454fa 51%,
-    rgba(225, 228, 226, 0) 99%,
-    rgba(229, 229, 229, 0) 100%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    to right,
-    rgba(30, 87, 153, 0) 0%,
-    #545454fa 50%,
-    #545454fa 51%,
-    rgba(225, 228, 226, 0) 99%,
-    rgba(229, 229, 229, 0) 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient(left,
+      rgba(30, 87, 153, 0) 0%,
+      #545454fa 50%,
+      #545454fa 51%,
+      rgba(225, 228, 226, 0) 99%,
+      rgba(229, 229, 229, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,
+      rgba(30, 87, 153, 0) 0%,
+      #545454fa 50%,
+      #545454fa 51%,
+      rgba(225, 228, 226, 0) 99%,
+      rgba(229, 229, 229, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,
+      rgba(30, 87, 153, 0) 0%,
+      #545454fa 50%,
+      #545454fa 51%,
+      rgba(225, 228, 226, 0) 99%,
+      rgba(229, 229, 229, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
+
 .selected {
   color: rgba(0, 0, 0, 0.7) !important;
   font-weight: 600;
 }
+
 .brandTitle a {
   text-decoration: none;
   color: black;
 }
+
 .menuBox {
   box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
   padding: 5px 10px;
   margin: 0px 10px;
 }
+
 .loc {
   position: absolute;
   right: 0%;
+}
+
+.toggle-button {
+  -webkit-appearance: none;
+  outline: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  position: relative;
+  transition: 0.4s;
+  background: url("https://raw.githubusercontent.com/RuchiVS/image-upload/main/moon.png") no-repeat center #212121;
+  background-size: 60px;
+  cursor: pointer;
+}
+
+.toggle-button:checked {
+  background: url("https://raw.githubusercontent.com/RuchiVS/image-upload/main/sun.png") no-repeat center #ffffff;
+  background-size: 60px;
 }
