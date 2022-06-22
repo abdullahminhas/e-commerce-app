@@ -1,38 +1,78 @@
 import React from "react";
 import classes from "./Footer.module.css";
+import { DarkModeContext } from "../../Context/DarkModeContext";
+import { useContext } from "react";
+import dark from "./FooterDark.module.css";
 
 function Footer() {
+  const { darkMode } = useContext(DarkModeContext);
+  console.log("footer " + darkMode);
   return (
     <React.Fragment>
-      <div style={{ backgroundColor: "black", padding: "10px 0px" }}>
+      <div
+        className={darkMode == false ? `${classes.bgDark}` : `${dark.bgLight}`}
+        style={{ padding: "10px 0px" }}
+      >
         <div className="container">
           <div className="row">
             <div className="col-md-3">
               <div className="d-flex flex-row align-items-center justify-content-center">
                 {/* <div className={classes.footerIco}></div> */}
                 <i className="fas fa-sync-alt text-white px-2"></i>
-                <p className={classes.footerHeadText}>Track Your order</p>
+                <p
+                  className={
+                    darkMode == false
+                      ? `${classes.footerHeadText}`
+                      : `${dark.footerHeadText}`
+                  }
+                >
+                  Track Your order
+                </p>
               </div>
             </div>
             <div className="col-md-3">
               <div className="d-flex flex-row align-items-center justify-content-center">
                 {/* <div className={classes.footerIco}></div> */}
                 <i className="far fa-id-badge text-white px-2"></i>
-                <p className={classes.footerHeadText}>Contact Us Anytime</p>
+                <p
+                  className={
+                    darkMode == false
+                      ? `${classes.footerHeadText}`
+                      : `${dark.footerHeadText}`
+                  }
+                >
+                  Contact Us Anytime
+                </p>
               </div>
             </div>
             <div className="col-md-3">
               <div className="d-flex flex-row align-items-center justify-content-center">
                 {/* <div className={classes.footerIco}></div> */}
                 <i className="fas fa-redo text-white px-2"></i>
-                <p className={classes.footerHeadText}>Return within 30 days</p>
+                <p
+                  className={
+                    darkMode == false
+                      ? `${classes.footerHeadText}`
+                      : `${dark.footerHeadText}`
+                  }
+                >
+                  Return within 30 days
+                </p>
               </div>
             </div>
             <div className="col-md-3">
               <div className="d-flex flex-row align-items-center justify-content-center">
                 {/* <div className={classes.footerIco}></div> */}
                 <i className="fas fa-truck-moving text-white px-2"></i>
-                <p className={classes.footerHeadText}>Cash on delivery</p>
+                <p
+                  className={
+                    darkMode == false
+                      ? `${classes.footerHeadText}`
+                      : `${dark.footerHeadText}`
+                  }
+                >
+                  Cash on delivery
+                </p>
               </div>
             </div>
           </div>

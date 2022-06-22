@@ -2,10 +2,16 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import classes from "./NavbarComponent.module.css";
 import dark from "./DarkNav.module.css";
+import { DarkModeContext } from "../../Context/DarkModeContext";
+import { useContext } from "react";
 
 const Navbar = (props) => {
-  const [darkMode, setDarkMode] = useState(false);
+  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   console.log(darkMode);
+
+  function handleChange() {
+    toggleDarkMode();
+  }
 
   return (
     <div
@@ -28,7 +34,7 @@ const Navbar = (props) => {
             type={"checkbox"}
             className="me-2"
             value="check"
-            onChange={(e) => setDarkMode(e.target.checked)}
+            onChange={handleChange}
           />
           Dark Mode
         </label>

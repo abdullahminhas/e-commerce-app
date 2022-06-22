@@ -6,10 +6,14 @@ import img from "../../assets/clothes.jpeg";
 import img2 from "../../assets/clothes2.jpeg";
 import Card from "../../Components/CardComponent/Card";
 import CardData from "../../Components/CardComponent/CardData";
+import dark from "./HomeDark.module.css";
+import { DarkModeContext } from "../../Context/DarkModeContext";
+import { useContext } from "react";
 
 const Home = () => {
+  const { darkMode } = useContext(DarkModeContext);
   return (
-    <div>
+    <div className={darkMode ? `${dark.bgDark}` : ""}>
       <Navbar />
       <div
         id="carouselExampleIndicators"
