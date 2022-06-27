@@ -2,6 +2,22 @@
   background-color: white;
 }
 .footerHeadText {
-  color: black;
+  color: #202124;
   margin-bottom: 0;
+}
+.footerDark {
+  width: 100%;
+  min-height: 25vh;
+  background-color: #202124;
+  /* margin-top: auto; */
+}
+.footerDark .infoSectionDark {
+  margin-top: 25px;
+}
+.footerDark .infoSectionDark p {
+  color: white;
+}
+
+.footerDark .infoSectionDark h6 {
+  color: white;
 }

@@ -18,7 +18,13 @@ function Footer() {
             <div className="col-md-3">
               <div className="d-flex flex-row align-items-center justify-content-center">
                 {/* <div className={classes.footerIco}></div> */}
-                <i className="fas fa-sync-alt text-white px-2"></i>
+                <i
+                  className={
+                    darkMode == true
+                      ? "fas fa-sync-alt text-dark px-2"
+                      : "fas fa-sync-alt text-white px-2"
+                  }
+                ></i>
                 <p
                   className={
                     darkMode == false
@@ -33,7 +39,13 @@ function Footer() {
             <div className="col-md-3">
               <div className="d-flex flex-row align-items-center justify-content-center">
                 {/* <div className={classes.footerIco}></div> */}
-                <i className="far fa-id-badge text-white px-2"></i>
+                <i
+                  className={
+                    darkMode == true
+                      ? "far fa-id-badge text-dark px-2"
+                      : "far fa-id-badge text-white px-2"
+                  }
+                ></i>
                 <p
                   className={
                     darkMode == false
@@ -48,7 +60,13 @@ function Footer() {
             <div className="col-md-3">
               <div className="d-flex flex-row align-items-center justify-content-center">
                 {/* <div className={classes.footerIco}></div> */}
-                <i className="fas fa-redo text-white px-2"></i>
+                <i
+                  className={
+                    darkMode == true
+                      ? "fas fa-redo text-dark px-2"
+                      : "fas fa-redo text-white px-2"
+                  }
+                ></i>
                 <p
                   className={
                     darkMode == false
@@ -63,7 +81,13 @@ function Footer() {
             <div className="col-md-3">
               <div className="d-flex flex-row align-items-center justify-content-center">
                 {/* <div className={classes.footerIco}></div> */}
-                <i className="fas fa-truck-moving text-white px-2"></i>
+                <i
+                  className={
+                    darkMode == true
+                      ? "fas fa-truck-moving text-dark px-2"
+                      : "fas fa-truck-moving text-white px-2"
+                  }
+                ></i>
                 <p
                   className={
                     darkMode == false
@@ -78,24 +102,52 @@ function Footer() {
           </div>
         </div>
       </div>
-      <section className={classes.footer}>
+      <section
+        className={
+          darkMode == false ? `${classes.footer}` : `${dark.footerDark}`
+        }
+      >
         <div className="container">
           <div className="row">
-            <div className={`col-xl-3 col-lg-3 col-12 ${classes.infoSection}`}>
+            <div
+              className={
+                darkMode == false
+                  ? `col-xl-3 col-lg-3 col-12 ${classes.infoSection}`
+                  : `col-xl-3 col-lg-3 col-12 ${dark.infoSectionDark}`
+              }
+            >
               <h6>Get in Touch</h6>
               <p>House 5A, lorem ipsum, Isb</p>
               <p>Pakistan</p>
               <p>royal.threads@gmail.com</p>
             </div>
-            <div className={`col-xl-3 col-lg-3 col-12 ${classes.infoSection}`}>
+            <div
+              className={
+                darkMode == false
+                  ? `col-xl-3 col-lg-3 col-12 ${classes.infoSection}`
+                  : `col-xl-3 col-lg-3 col-12 ${dark.infoSectionDark}`
+              }
+            >
               <h6>Customer Care</h6>
               <p>Customer Care</p>
             </div>
-            <div className={`col-xl-3 col-lg-3 col-12 ${classes.infoSection}`}>
+            <div
+              className={
+                darkMode == false
+                  ? `col-xl-3 col-lg-3 col-12 ${classes.infoSection}`
+                  : `col-xl-3 col-lg-3 col-12 ${dark.infoSectionDark}`
+              }
+            >
               <h6>Information</h6>
               <p>Information</p>
             </div>
-            <div className={`col-xl-3 col-lg-3 col-12 ${classes.infoSection}`}>
+            <div
+              className={
+                darkMode == false
+                  ? `col-xl-3 col-lg-3 col-12 ${classes.infoSection}`
+                  : `col-xl-3 col-lg-3 col-12 ${dark.infoSectionDark}`
+              }
+            >
               <h6>Subscribe</h6>
               <p>Subscribe</p>
             </div>

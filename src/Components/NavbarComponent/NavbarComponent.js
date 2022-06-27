@@ -192,7 +192,9 @@ const Navbar = (props) => {
           </div>
         </div>
       </nav>
-      <span className={classes.line}></span>
+      <span
+        className={darkMode == true ? `${dark.line}` : `${classes.line}`}
+      ></span>
     </div>
   );
 };
