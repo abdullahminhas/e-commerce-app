@@ -3,26 +3,32 @@
   display: block;
   width: 80%;
   height: 1px;
-  background: -moz-linear-gradient(left,
-      rgba(30, 87, 153, 0) 0%,
-      #545454fa 50%,
-      #545454fa 51%,
-      rgba(225, 228, 226, 0) 99%,
-      rgba(229, 229, 229, 0) 100%);
+  background: -moz-linear-gradient(
+    left,
+    rgba(30, 87, 153, 0) 0%,
+    #545454fa 50%,
+    #545454fa 51%,
+    rgba(225, 228, 226, 0) 99%,
+    rgba(229, 229, 229, 0) 100%
+  );
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(left,
-      rgba(30, 87, 153, 0) 0%,
-      #545454fa 50%,
-      #545454fa 51%,
-      rgba(225, 228, 226, 0) 99%,
-      rgba(229, 229, 229, 0) 100%);
+  background: -webkit-linear-gradient(
+    left,
+    rgba(30, 87, 153, 0) 0%,
+    #545454fa 50%,
+    #545454fa 51%,
+    rgba(225, 228, 226, 0) 99%,
+    rgba(229, 229, 229, 0) 100%
+  );
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right,
-      rgba(30, 87, 153, 0) 0%,
-      #545454fa 50%,
-      #545454fa 51%,
-      rgba(225, 228, 226, 0) 99%,
-      rgba(229, 229, 229, 0) 100%);
+  background: linear-gradient(
+    to right,
+    rgba(30, 87, 153, 0) 0%,
+    #545454fa 50%,
+    #545454fa 51%,
+    rgba(225, 228, 226, 0) 99%,
+    rgba(229, 229, 229, 0) 100%
+  );
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
@@ -48,7 +54,7 @@
   right: 0%;
 }
 
-.toggle-button {
+.toggleButton {
   -webkit-appearance: none;
   outline: none;
   width: 100px;
@@ -56,12 +62,14 @@
   border-radius: 50px;
   position: relative;
   transition: 0.4s;
-  background: url("https://raw.githubusercontent.com/RuchiVS/image-upload/main/moon.png") no-repeat center #212121;
   background-size: 60px;
   cursor: pointer;
+  background: url("https://raw.githubusercontent.com/RuchiVS/image-upload/main/sun.png")
+    no-repeat center #ffffff;
 }
 
-.toggle-button:checked {
-  background: url("https://raw.githubusercontent.com/RuchiVS/image-upload/main/sun.png") no-repeat center #ffffff;
+.toggleButton:checked {
+  background: url("https://raw.githubusercontent.com/RuchiVS/image-upload/main/moon.png")
+    no-repeat center #212121;
   background-size: 60px;
 }
