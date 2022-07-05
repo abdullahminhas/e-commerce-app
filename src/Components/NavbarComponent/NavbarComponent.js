@@ -101,9 +101,19 @@ const Navbar = (props) => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Disabled
-                </a>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? darkMode == true
+                        ? `nav-link ${dark.selected}`
+                        : `nav-link ${classes.selected}`
+                      : "nav-link"
+                  }
+                  end
+                  to="/contact"
+                >
+                  Contact
+                </NavLink>
               </li>
               <div
                 className={`d-flex flex-row align-items-center ${classes.loc}`}
