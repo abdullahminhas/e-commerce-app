@@ -4,8 +4,8 @@ import Footer from "../../Components/FooterComponent/Footer";
 import Navbar from "../../Components/NavbarComponent/NavbarComponent";
 import img from "../../assets/clothes.jpeg";
 import img2 from "../../assets/clothes2.jpeg";
-import Card from "../../Components/CardComponent/Card";
-import CardData from "../../Components/CardComponent/CardData";
+import Card from "../../Components/CardComponent/CardComponent";
+// import CardData from "../../Components/CardComponent/CardData";
 import dark from "./HomeDark.module.css";
 import { DarkModeContext } from "../../Context/DarkModeContext";
 import { useContext } from "react";
@@ -93,64 +93,16 @@ const Home = () => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
-
-      <div className="headings">
-        <h4
-          className={
-            darkMode === true
-              ? "text-white text-center text-uppercase mt-4"
-              : "text-dark text-center text-uppercase mt-4"
-          }
-        >
-          Trending - Categories
-        </h4>
-        <div
-          className={
-            darkMode === true
-              ? "text-white text-center"
-              : "text-dark text-center"
-          }
-          {...`${classes.homeCards} ${classes.cardsSection}`}
-        >
-          <Card details={CardData} />
-        </div>
-        <h4
-          className={
-            darkMode === true
-              ? "text-white text-center text-uppercase"
-              : "text-dark text-center text-uppercase"
-          }
-        >
-          Shop By Categories
-        </h4>
-        <div
-          className={
-            darkMode === true
-              ? "text-white text-center"
-              : "text-dark text-center"
-          }
-          {...`${classes.homeCards} ${classes.cardsSection}`}
-        >
-          <Card details={CardData} />
-        </div>
-        <h4
-          className={
-            darkMode === true
-              ? "text-white text-center text-uppercase"
-              : "text-dark text-center text-uppercase"
-          }
-        >
-          Discover
-        </h4>
-        <div
-          className={
-            darkMode === true
-              ? "text-white text-center"
-              : "text-dark text-center"
-          }
-          {...`${classes.homeCards} ${classes.cardsSection}`}
-        >
-          <Card details={CardData} />
+      <div className="container-fluid">
+        <div className="row my-5">
+          <div className="col-3">sidebar</div>
+          <div className="col-9">
+            <div className="row">
+              <div className="col-4">
+                <Card />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
